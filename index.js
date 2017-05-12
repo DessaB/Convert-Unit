@@ -6,7 +6,7 @@ var Qty = require('js-quantities');
 console.log("Application started");
 
 app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res){
     res.json('Unit-Converter server running');
