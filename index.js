@@ -1,7 +1,7 @@
 var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
 var Qty = require('js-quantities');
-var app = express();
 
 console.log("Let's do this");
 
