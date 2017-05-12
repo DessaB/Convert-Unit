@@ -15,9 +15,9 @@ app.get('/', function (req, res){
 });
 
 app.post('/convert', function (req, res){
-    var text = req.body.text;
-
-    res.send('Text = ' + text);
+    var input = req.body.text || req.body;
+    var output = Qty.parse("input");
+    res.send('Input = ' + input + ". Output = " + output);
 });
 
 
