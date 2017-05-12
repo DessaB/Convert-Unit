@@ -7,6 +7,9 @@ console.log("Running on port " + process.env.PORT );
 
 var result = "Result GET!!"
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', function (req, res){
     res.json('Unit-Converter server running');
 });
