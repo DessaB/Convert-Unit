@@ -16,7 +16,7 @@ app.post('/convert', function (req, res){
     var input = req.body.text.toLowerCase();
     var words = input.split("to");
     var output = Qty(words[0]).to(words[1]);
-
+    console.log("Input: " + input + " Output: " + output + "Words: " + words )
     //var output = Qty.parse(input) || "Invalid Unit Provided";
     res.send('Input = ' + input + ". Output = " + output);
 });
