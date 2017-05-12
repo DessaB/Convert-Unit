@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var Qty = require('js-quantities');
 
-console.log("Let's do this");
+console.log("Running on port " + process.env.PORT );
 
 var result = "Result GET!!"
 
@@ -17,4 +17,6 @@ app.post('/convert', function (req, res){
 });
 
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env)
+});
