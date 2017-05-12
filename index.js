@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var Qty = require('js-quantities');
 
-console.log("Running on port " + process.env.PORT );
+console.log("Application started");
 
 var result = "Result GET!!"
 
@@ -16,7 +16,8 @@ app.get('/', function (req, res){
 
 app.post('/convert', function (req, res){
     var text = req.body.text;
-    res.send('Hello world!');
+
+    res.send('Text = ' + text);
 });
 
 
